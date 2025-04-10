@@ -6,13 +6,13 @@ $('.clickable').bind('click', function (ev) {
     var x = ev.clientX - offset.left;
     var y = ev.clientY - offset.top;
 
-    $display.img(url("/images/skills/Quick Recovery.jpg"));
+    $display.img(url("images/skills/Quick Recovery.jpg"));
 });
 
 var myData = {
     "left-eye": {
         "title": "Quick Recovery",
-        "image": "/images/skills/Quick Recovery.jpg",
+        "image": "images/skills/Quick Recovery.jpg",
         
         "description": "1 Restore 1 Health. <br><br>" +
                 "2 Use before activating to remove any Stunned, Poisoned or Wounded counters. <br><br>" +
@@ -22,7 +22,7 @@ var myData = {
     },
     "mouth": {
         "title": "This point B",
-        "image": "/images/skills/Acrobatics.jpg",       
+        "image": "images/skills/Acrobatics.jpg",       
         "description": "Lorem ipsum B dolor sin amet."
     },
    
