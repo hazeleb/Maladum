@@ -21,7 +21,7 @@ img.trade {
 }
 
 .display {
-    background-image: url("/images/skills/Quick Recovery.jpg");
+    background-image: url("images/skills/Quick Recovery.jpg");
     background-repeat: no-repeat;
     display: block;
     height: 100%;
