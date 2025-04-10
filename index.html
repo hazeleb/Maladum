@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Maladum Character</title>
+</head>
+<body>
+    
+    <div id="myWrapper">
+        <img id="myImage" src="/images/characters/Grogmar.jpg" usemap="#myMap" alt="" />
+
+
+    <map name="myMap" id="myMap">
+        <area id="left-eye"  coords="486,293,532,324" shape="rect">
+        <area id="mouth"  coords="121,84,198,118" shape="rect">
+    </map>
+
+    <div id="myBubble">
+        <div id="myBubbleContent"></div>
+        <div id="myBubbleCloseButton">✕</div>
+        </div>
+    </div>
+    
+
+    <img class= "char" src="/images/characters/Grogmar.jpg" alt="Grogmar character" usemap="#grogmar">
+    <img class= "trade" src="/images/trades/Sellsword.jpg" alt="Sellsword" usemap="#sellsword">  
+
+    <map name="grogmar">
+        <area class="clickable" href="javascript:;" shape="rect" coords="486,293,532,324" alt="Quick Recovery" title="Quick Recovery">
+    </map> 
+
+    <div class='clickable'>
+        <span class='display'>
+        </span>
+    </div>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="index.js"></script> 
+    <script src="https://cdn.rawgit.com/davidjbradshaw/image-map-resizer/master/js/imageMapResizer.js"></script>
+    
+</body>
+</html>
