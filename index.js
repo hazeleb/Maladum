@@ -32,7 +32,7 @@ for(var i=0, l=areas.length; i<l; i++) {
 bubbleClose.addEventListener('click', closeBubble, false);
 
 function openBubble() {
-  var content = myData[this.id];
+  //var content = myData[this.id];
   if (this.id == 'Less Health' || this.id == 'Extra Skill') {
     bubbleContent.innerHTML = `
         <p>${this.id}</p>
