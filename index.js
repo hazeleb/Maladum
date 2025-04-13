@@ -1,36 +1,27 @@
-$('.clickable').bind('click', function (ev) {
-    var $div = $(ev.target);
-    var $display = $div.find('.display');
-
-    var offset = $div.offset();
-    var x = ev.clientX - offset.left;
-    var y = ev.clientY - offset.top;
-
-    $display.img(url("images/skills/Quick Recovery.jpg"));
-});
-
-var myData = {
-    "left-eye": {
-        "title": "Quick Recovery",
-        "image": "images/skills/Quick Recovery.jpg",
-        
-        "description": "1 Restore 1 Health. <br><br>" +
-                "2 Use before activating to remove any Stunned, Poisoned or Wounded counters. <br><br>" +
-                "3 <b>Reaction:</b> Use after being defeated. You are no longer defeated – restore 1" +
-                "Health and Stand Up. <br>" +
-                "&nbsp; <b>Passive:</b> At the start of your turn you may remove one Fatigued counter."
-    },
-    "mouth": {
-        "title": "This point B",
-        "image": "images/skills/Acrobatics.jpg",       
-        "description": "Lorem ipsum B dolor sin amet."
-    },
-   
-};
 var areas         = document.getElementsByTagName('area'),
     bubble        = document.getElementById('myBubble'),
     bubbleContent = document.getElementById('myBubbleContent'),
-    bubbleClose   = document.getElementById('myBubbleCloseButton');
+    bubbleClose   = document.getElementById('myBubbleCloseButton'),
+    selectContentC= document.getElementById('mySelectImagesC'),
+    selectContentT= document.getElementById('mySelectImagesT');
+
+const dropdownC = document.getElementById('character');
+const dropdownT = document.getElementById('trade');
+
+dropdownC.addEventListener('change', function() {
+    const selectedValueC = dropdownC.value;
+    selectContentC.innerHTML = 
+    `
+    <img id="${selectedValueC}" class="myCharImage" src="images/characters/${selectedValueC}.jpg" usemap="#${selectedValueC}" />`
+});  
+
+dropdownT.addEventListener('change', function() {
+    const selectedValueT = dropdownT.value;
+    selectContentT.innerHTML = 
+    `
+    <img id= "${selectedValueT}" class="myTradeImage" src="images/trades/${selectedValueT}.jpg" usemap="#${selectedValueT}" />`;
+});  
+ 
 
 // On click of an area, open popup
 for(var i=0, l=areas.length; i<l; i++) {
@@ -42,10 +33,16 @@ bubbleClose.addEventListener('click', closeBubble, false);
 
 function openBubble() {
   var content = myData[this.id];
-  bubbleContent.innerHTML = 
-                          '<img src="' + content.image + '" alt="" />'
-                          + '<h3>' + content.title + '</h3>'
-                          + '<p>' + content.description + '</p>';
+  if (this.id == 'Less Health' || this.id == 'Extra Skill') {
+    bubbleContent.innerHTML = `
+        <p>${this.id}</p>
+        `;
+  } else {
+    bubbleContent.innerHTML = `
+        <p>${this.id}</p>
+        <img src="images/skills/${this.id}.jpg" alt="${this.id}" />
+        `;
+  }
   bubble.className = 'shown';
 }
 
