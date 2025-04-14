@@ -50,5 +50,3 @@ function closeBubble() {
   bubble.className = '';
 }
 
-// Make the image map responsive
-//imageMapResize();
