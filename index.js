@@ -51,4 +51,4 @@ function closeBubble() {
 }
 
 // Make the image map responsive
-imageMapResize();
+//imageMapResize();
