@@ -1,6 +1,5 @@
 // Check if the user is accessing the page on a mobile device
 var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-console.log(isMobile)
 
 var areas = document.getElementsByTagName('area'),
     selectContentC = document.getElementById('mySelectImagesC'),
