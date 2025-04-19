@@ -21,14 +21,12 @@ dropdownC.addEventListener('change', function() {
     selectmapinfo.innerHTML = contentC.mobile_map + contentT.mobile_map;
     selectContentC.innerHTML = 
     `
-    <p> Is Mobile </p>
     <img id="${selectedValueC}" class="myCharImage_mobile" src="images/characters/${selectedValueC}.jpg" usemap="#${selectedValueC}" />
     ` ;
   } else {
     selectmapinfo.innerHTML = contentC.map + contentT.map;
     selectContentC.innerHTML = 
     `
-    <p> Is Not Mobile </p>
     <img id="${selectedValueC}" class="myCharImage" src="images/characters/${selectedValueC}.jpg" usemap="#${selectedValueC}" />
     ` ;
   }

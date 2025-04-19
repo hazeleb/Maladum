@@ -60,18 +60,8 @@ const myData = {
                     <area id="Extra Skill"  coords="528,152,568,177" shape="rect" alt="Extra Skill" title="Extra Skill" href="javascript:;">
                 </map>`,
         "mobile_map": `<map name="Curator" id="Curator_map">
-                    <area id="Loremaster"  coords="29,110,72,150" shape="rect" alt="Loremaster" title="Loremaster" href="javascript:;">
-                    <area id="Herbalism"  coords="91,74,130,110" shape="rect" alt="Herbalism" title="Herbalism" href="javascript:;">
-                    <area id="Unlikely Hero"  coords="149,115,194,147" shape="rect" alt="Unlikely Hero" title="Unlikely Hero" href="javascript:;">
-                    <area id="Smithing"  coords="199,46,238,82" shape="rect" alt="Smithing" title="Smithing" href="javascript:;">
-                    <area id="Duck for Cover"  coords="245,110,290,144" shape="rect" alt="Duck for Cover" title="Duck for Cover" href="javascript:;">
-                    <area id="Tactical Gift"  coords="295,43,334,83" shape="rect" alt="Tactical Gift" title="Tactical Gift" href="javascript:;">
-                    <area id="Barter"  coords="342,111,385,146" shape="rect" alt="Barter" title="Barter" href="javascript:;">
-                    <area id="Tracking"  coords="390,43,433,83" shape="rect" alt="Tracking" title="Tracking" href="javascript:;">
-                    <area id="Natural Remedies"  coords="440,108,485,144" shape="rect" alt="Natural Remedies" title="Natural Remedies" href="javascript:;">
-                    <area id="Malacyte Mastery Spells"  coords="495,42,534,82" shape="rect" alt="Malacyte Mastery" title="Malacyte Mastery" href="javascript:;">
-                    <area id="Less Health"  coords="534,82,578,130" shape="rect" alt="Less Health" title="Less Health" href="javascript:;">
-                    <area id="Extra Skill"  coords="528,152,568,177" shape="rect" alt="Extra Skill" title="Extra Skill" href="javascript:;">
+                    <area id="Loremaster"  coords="14,55,36,75" shape="rect" alt="Loremaster" title="Loremaster" href="javascript:;">
+                    <area id="Herbalism"  coords="45,37,65,55" shape="rect" alt="Herbalism" title="Herbalism" href="javascript:;">
                 </map>`
     },
     "Marksman": {   
