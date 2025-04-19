@@ -5,6 +5,11 @@ const myData = {
                     <area id="Quick Recovery"  coords="486,293,532,324" shape="rect" alt="Quick Recovery" title="Quick Recovery" href="javascript:;">
                     <area id="Unarmed Combat"  coords="334,125,384,169" shape="rect" alt="Unarmed Combat" title="Unarmed Combat" href="javascript:;">
                     <area id="Size"  coords="346,191,384,235" shape="rect" alt="Size" title="Size" href="javascript:;">
+                </map>`,
+        "mobile_map": `<map name="Grogmar" id="Grogmar_map">
+                    <area id="Quick Recovery"  coords="243,146,266,162" shape="rect" alt="Quick Recovery" title="Quick Recovery" href="javascript:;">
+                    <area id="Unarmed Combat"  coords="167,62,192,84" shape="rect" alt="Unarmed Combat" title="Unarmed Combat" href="javascript:;">
+                    <area id="Size"  coords="173,95,192,117" shape="rect" alt="Size" title="Size" href="javascript:;">
                 </map>`
     },
     "Artain": {   
