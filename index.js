@@ -1,38 +1,51 @@
-var areas         = document.getElementsByTagName('area'),
+var areas = document.getElementsByTagName('area'),
+    selectContentC = document.getElementById('mySelectImagesC'),
+    selectContentT = document.getElementById('mySelectImagesT'),
+    selectmapinfo = document.getElementById('mapinfo'),
     bubble        = document.getElementById('myBubble'),
     bubbleContent = document.getElementById('myBubbleContent'),
-    bubbleClose   = document.getElementById('myBubbleCloseButton'),
-    selectContentC= document.getElementById('mySelectImagesC'),
-    selectContentT= document.getElementById('mySelectImagesT');
+    bubbleClose   = document.getElementById('myBubbleCloseButton');
 
 const dropdownC = document.getElementById('character');
 const dropdownT = document.getElementById('trade');
 
 dropdownC.addEventListener('change', function() {
-    const selectedValueC = dropdownC.value;
-    selectContentC.innerHTML = 
-    `
-    <img id="${selectedValueC}" class="myCharImage" src="images/characters/${selectedValueC}.jpg" usemap="#${selectedValueC}" />`
+  const selectedValueC = dropdownC.value;
+  const selectedValueT = dropdownT.value;
+  var contentC = myData[selectedValueC];
+  var contentT = myData[selectedValueT];
+  selectmapinfo.innerHTML = contentC.map + contentT.map;
+  selectContentC.innerHTML = 
+  `
+  <img id="${selectedValueC}" class="myCharImage" src="images/characters/${selectedValueC}.jpg" usemap="#${selectedValueC}" />
+  ` ;
+  // On click of an area, open popup
+  for(var i=0, l=areas.length; i<l; i++) {
+    areas[i].addEventListener('click', openBubble, false);
+  }
 });  
 
 dropdownT.addEventListener('change', function() {
-    const selectedValueT = dropdownT.value;
-    selectContentT.innerHTML = 
-    `
-    <img id= "${selectedValueT}" class="myTradeImage" src="images/trades/${selectedValueT}.jpg" usemap="#${selectedValueT}" />`;
+  const selectedValueC = dropdownC.value;
+  const selectedValueT = dropdownT.value;
+  var contentC = myData[selectedValueC];
+  var contentT = myData[selectedValueT];
+  selectmapinfo.innerHTML = contentC.map + contentT.map;
+  selectContentT.innerHTML = 
+  `
+  <img id= "${selectedValueT}" class="myTradeImage" src="images/trades/${selectedValueT}.jpg" usemap="#${selectedValueT}" />
+  `;
+  // On click of an area, open popup
+  for(var i=0, l=areas.length; i<l; i++) {
+    areas[i].addEventListener('click', openBubble, false);
+  }
 });  
- 
 
-// On click of an area, open popup
-for(var i=0, l=areas.length; i<l; i++) {
-  areas[i].addEventListener('click', openBubble, false);
-}
 
 // On click of close button, close popup
 bubbleClose.addEventListener('click', closeBubble, false);
 
 function openBubble() {
-  //var content = myData[this.id];
   if (this.id == 'Less Health' || this.id == 'Extra Skill') {
     bubbleContent.innerHTML = `
         <p>${this.id}</p>
@@ -50,3 +63,6 @@ function closeBubble() {
   bubble.className = '';
 }
 
+
+// Make the image map responsive
+//imageMapResize();
