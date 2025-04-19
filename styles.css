@@ -3,8 +3,8 @@ body {background-color:#4b959a; font-family: Arial, Helvetica, sans-serif;}
 #myWrapper{ position: relative; font-family: Arial, Helvetica, sans-serif; }
 .myCharImage{ display: block; width: 600px; height: 400px; }
 .myTradeImage{ display: block; width: 600px; height: 200px; object-fit: scale-down;}
-.myCharImage_mobile{ display: block; width: 600px; height: 400px; }
-.myTradeImage_mobile{ display: block; width: 600px; height: 400px; object-fit: scale-down;}
+.myCharImage_mobile{ display: block; width: 300px; height: 200px; }
+.myTradeImage_mobile{ display: block; width: 300px; height: 100px; object-fit: scale-down;}
 #myBubble{ position: absolute; background: #64bfc6; border: 1px solid #aaa; padding: .5rem 1rem; display: none; top: 1.5rem; left: 1.5rem; width: 20rem; }
 #myBubble.shown{ display: block; }
 #myBubble img{ display: block; width: 100%; }
