@@ -1,5 +1,6 @@
 // Check if the user is accessing the page on a mobile device
 var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+console.log(isMobile)
 
 var areas = document.getElementsByTagName('area'),
     selectContentC = document.getElementById('mySelectImagesC'),
@@ -21,12 +22,14 @@ dropdownC.addEventListener('change', function() {
     selectmapinfo.innerHTML = contentC.mobile_map + contentT.mobile_map;
     selectContentC.innerHTML = 
     `
+    <p> Is Mobile </p>
     <img id="${selectedValueC}" class="myCharImage_mobile" src="images/characters/${selectedValueC}.jpg" usemap="#${selectedValueC}" />
     ` ;
   } else {
     selectmapinfo.innerHTML = contentC.map + contentT.map;
     selectContentC.innerHTML = 
     `
+    <p> Is Not Mobile </p>
     <img id="${selectedValueC}" class="myCharImage" src="images/characters/${selectedValueC}.jpg" usemap="#${selectedValueC}" />
     ` ;
   }
